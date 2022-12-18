@@ -1,0 +1,241 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Open+Sans:wght@300;700&display=swap');
+
+/* fontes (100; 400, 700)
+	font-family: 'Montserrat', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	font-size: 12pt;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header {
+	align-items: center;
+	display: flex;
+	font-family: 'Montserrat', sans-serif;
+	justify-content: center;
+	min-height: 50px;
+}
+
+.chamada {
+	color: #fff;
+	height: fit-content;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	overflow: hidden;
+  position: relative;
+	text-align: center;
+}
+
+.chamada:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+	background: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url('img/1549_ibirapuera.jpg'), no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+	background-attachment: fixed;
+}
+
+.txt-chamada {
+  position: relative;
+}
+
+.txt-chamada > p {
+	margin: 0.5em auto;
+}
+
+.txt-chamada .p0 {
+	font-size: 1.5em;
+}
+
+.txt-chamada .p1, .txt-chamada .p2 {
+	font-size: 2em;
+}
+
+.txt-chamada .p2 {
+	font-weight: 700;
+}
+
+.txt-chamada .p3 {
+	font-size: 1.1em;
+	margin-top: 2em;
+}
+
+button {
+	background-color: #ffff62;
+	border: 1px solid black;
+	border-radius: 3px;
+	font-size: 13pt;
+	margin-top: 25px;
+	padding: 7px 15px;
+}
+
+button:hover {
+	background-color: #fff;
+	cursor: pointer;
+	transition: 150ms linear;
+}
+
+.meio {
+	text-align: center;
+}
+
+.meio h2, .meio p {
+	margin: 20px auto;
+}
+
+.introducao, .vantagens, .ameaca {
+	margin: 50px auto;
+	max-width: 900px;
+}
+
+.introducao p {
+	max-width: 700px;
+}
+
+.vantagens {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.vantagens > div {
+	min-height: 300px;
+	min-width: 200px;
+	width: 25%;
+}
+
+.vantagens > div > * {
+	margin: 20px auto;
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+}
+
+.vantagens > div .img-vantagens {
+	height: 250px;
+}
+
+.img-divercao, .img-alimentacao, .img-sol {
+	background: no-repeat center bottom;
+	background-size: cover;
+	border-radius: 3px;
+}
+
+.img-divercao {
+	background-image: linear-gradient(#4f523d4f, #4f523d4f), url("img/divercao.jpg");
+}
+
+.img-alimentacao {
+	background-image: linear-gradient(#4f523d4f, #4f523d4f), url("img/alimentacao.jpg");
+}
+
+.img-sol {
+	background-image: linear-gradient(#4f523d4f, #4f523d4f), url("img/sol.jpg");
+}
+
+.ameaca .p1 {
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+.ameaca .p1::after {
+	content: " \01F601 \01F52A";
+}
+
+.confirmar {
+	background-color: #ffff89;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 30px;
+}
+
+.confirmar > div {
+	width: 50%;
+}
+
+.passo-a-passo > * {
+	padding-left: 10%;
+}
+
+.passo-a-passo * {
+	margin: 10px auto;
+}
+
+.passo-a-passo ol > li::marker {
+  font-weight: bold;
+}
+
+fieldset {
+	border: none;
+}
+
+fieldset * {
+	display: block;
+}
+
+fieldset input, fieldset textarea {
+	font-size: 12pt;
+	padding: 7px 5px;
+	width: 90%;
+}
+
+fieldset label {
+	font-weight: 700;
+	margin-top: 15px;
+}
+
+footer {
+	padding-bottom: 10px;
+	padding-top: 20px;
+}
+
+footer p {
+	text-align: center;
+}
+
+@media (max-width: 900px) {
+	.vantagens {
+		display: block;
+	}
+
+	.introducao {
+		width: 90%;
+	}
+
+	.vantagens > div {
+		margin: 50px auto;
+	}
+
+	.confirmar {
+		display: block;
+	}
+
+	.confirmar > div {
+		width: 90%;
+	}
+
+	fieldset input, fieldset textarea {
+		width: 80vw;
+	}
+}

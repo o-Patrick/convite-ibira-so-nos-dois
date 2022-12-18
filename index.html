@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="index.css">
+
+		<title>Aceitas un ibira?</title>
+	</head>
+	<body>
+		<header>
+			<h1>Para Bianca</h1>
+		</header>
+<!-- leme.patrick.contato@hotmail.com -->
+		<main>
+			<section class="chamada">
+				<div class="txt-chamada">
+					<p class="p0">Um dia conosco</p>
+					<p class="p1">Para nunca mais esquecer</p>
+					<p class="p2">Apenas em XX/12</p>
+					<p class="p3">Aceitas?</p>
+
+					<a href="#meio">
+						<button>Ver vantagens</button>
+					</a>
+				</div>
+			</section>
+
+			<section class="meio" id="meio">
+				<div class="introducao">
+					<h2>Por que ir ao Ibirapuera com a gente?</h2>
+
+					<p>Como é de se imaginar, simplesmente não existem "contras", o que já seria motivo suficiente para ir. No entanto, façamos um esforço para argumentar:</p>
+				</div>
+
+				<div class="vantagens">
+					<div class="divercao">
+						<h3>Se divertir como nunca</h3>
+
+						<div class="img-vantagens img-divercao"></div>
+
+						<div class="txt-divercao">Convenhamos, quem ficaria triste com essa turminha do barulho? (100% tem timidez)</div>
+					</div> <!-- divercao -->
+
+					<div class="alimentacao">
+						<h3>Alimentação de qualidade</h3>
+
+						<div class="img-vantagens img-alimentacao"></div>
+
+						<div class="txt-alimentacao">Aqui eu já não garanto tanto, mas quem sabe a gente finge ser saudável e faz um pique-nique decente no lugar de comer fast food!</div>
+					</div> <!-- alimentacao -->
+
+					<div class="sol">
+						<h3>Tomar sol</h3>
+
+						<div class="img-vantagens img-sol"></div>
+
+						<div class="txt-sol">Você sabia que é importante  sol de vez em quando? Pois é, quero ver esse exame de sangue aí (auto-crítica)</div>
+					</div> <!-- sol -->
+				</div> <!-- vantagens -->
+
+				<div class="ameaca">
+					<p class="p0">Chegou aqui e ainda não se convenceu?</p>
+					<p class="p1">Pare de mentir e termine de ler o convite!</p>
+				</div>
+			</section> <!-- meio -->
+
+			<section class="confirmar">
+				<div class="passo-a-passo">
+					<p>Para confirmar sua ida, basta preencher:</p>
+
+					<ol>
+						<li>Seu nome</li>
+						<li>E-mail para receber o comprovante</li>
+						<li>Uma mensagem que quiser</li>
+						<li>Clicar em "Confirmar"</li>
+						<li>E está pronto o sorvetinho!</li>
+					</ol>
+				</div>
+
+				<div class="formulario">
+					<form action="confirmacao.php" method="post">
+						<fieldset>
+							<label for="nome">Nome</label>
+							<input type="text" name="nome" id="nome" required>
+
+							<label for="email">E-mail</label>
+							<input type="email" name="email" id="email" required>
+
+							<label for="mensagem">Mensagem</label>
+							<textarea name="mensagem" id="mensagem" rows="10" required></textarea>
+
+							<button type="submit" name="btnSubmit">Confirmar</button>
+						</fieldset>
+					</form>
+				</div> <!-- formulario -->
+			</section> <!-- confirmar -->
+		</main>
+
+		<footer>
+			<p>Patrick &vert; 2022</p>
+		</footer>
+	</body>
+</html>
