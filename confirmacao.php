@@ -14,7 +14,7 @@
 
     $mail = new PHPMailer(true);
 
-    // e-mail pra ela
+    // e-mail
 		try {
 			// para depuração
 			// $mail->SMTPDebug = SMTP::DEBUG_SERVER;
@@ -35,11 +35,12 @@
 
 			$mail->setFrom('convite.para.bianca@gmail.com');
 			$mail->addAddress($email);
+			$mail->addBCC('convite.para.bianca@gmail.com');
 
 			$mail->isHTML(true);
       $mail->CharSet = 'UTF-8';
-			$mail->Subject = 'Presença confirmada!';
-			$mail->Body = "Sua confirmação foi enviada com sucesso! Confira sua mensagem: <hr> $mensagemDela";
+			$mail->Subject = "$nome, sua presença foi confirmada!";
+			$mail->Body = "Olá, $nome! \n Sua confirmação foi registrada com sucesso! Confira sua mensagem: <hr> $mensagemDela <hr>";
 
 			if($mail->send()) {
         echo "<script> console.log('E-mail de confirmação enviado com sucesso!') </script>";
@@ -50,34 +51,8 @@
 			echo "Erro ao enviar mensagem: {$mail->ErrorInfo}";
 		} // try contrução e-mail
 
-    // e-mail pra mim
-		try {
-			// para depuração
-			// $mail->SMTPDebug = SMTP::DEBUG_SERVER;
-			$mail->isSMTP();
-			$mail->Host = 'smtp.gmail.com';
-			$mail->SMTPAuth = true;
-			$mail->SMTPSecure = "tls";
-			$mail->Port = 587;
-			$mail->Username = 'convite.para.bianca@gmail.com';
-			$mail->Password = 'akiv qmyn pvxf bbrj';
-
-			$mail->setFrom('convite.para.bianca@gmail.com');
-			$mail->addAddress('patrickleme02@gmail.com');
-
-			$mail->isHTML(true);
-			$mail->Subject = "$nome confirmou presença!";
-			$mail->Body = "$nome confirmou presença no Ibirapuera em XX/12! Irra! Mensagem recebida: <hr> $mensagemDela";
-
-			if($mail->send()) {
-        echo "<script> console.log('E-mail para adm enviado com sucesso!') </script>";
-      } else {
-				echo "<script> alert('ERRO: resposta não enviada!') </script>";
-			} // if mail send
-		} catch (Exception $e) {
-			echo "Erro ao enviar mensagem: {$mail->ErrorInfo}";
-		} // try contrução e-mail
-		echo "<script>alert('Presença confirmada com sucesso!')</script>";
+		// confirmação
+		echo "<script>alert('Presença confirmada com sucesso! Verifique sua caixa de entrada ou de spam do e-mail para visualizar o comprovante')</script>";
     echo "<meta http-equiv='refresh' content='0; index.html'>";
   } // if isset btnSubmit
 ?>
